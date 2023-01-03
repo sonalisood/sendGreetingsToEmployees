@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_HlNo8IprEe2YebK0qg0jYw" targetNamespace="http://tns.tibco.com/bw/composite/SendGreetings" name="SendGreetings" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_r91yYIpsEe2YebK0qg0jYw" name="sendgreetings" promote="ComponentSendGreetings/sendgreetings">
+    <sca:interface.wsdl xmi:id="_r9-8UIpsEe2YebK0qg0jYw" interface="http://xmlns.example.com/20230102124132PLT#wsdl.interface(sendgreetings)" scaext:wsdlLocation="../Processes/sendgreetings/SendGreetings.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_r-ItUIpsEe2YebK0qg0jYw" name="RestService" path="/sendgreetings" docBasePath="http://localhost:7777/SendGreetings" docResourcePath="SendGreetings" basePath="/" connector="sendgreetings.SendGreetings" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/sendgreetings.SendGreetings-SendGreetings.json">
+      <operation xmi:id="_r-SeUYpsEe2YebK0qg0jYw" operationName="post" nickname="post-sendgreetings" httpMethod="POST" notes="postSendGreetings" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_r-lZRYpsEe2YebK0qg0jYw"/>
+      <advancedConfig xmi:id="_r-SeUIpsEe2YebK0qg0jYw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_r-SeUopsEe2YebK0qg0jYw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_IXSmIIprEe2YebK0qg0jYw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IXvSEIprEe2YebK0qg0jYw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IX4cAIprEe2YebK0qg0jYw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IYL-AIprEe2YebK0qg0jYw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IYL-AYprEe2YebK0qg0jYw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IYVH8IprEe2YebK0qg0jYw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IYop8IprEe2YebK0qg0jYw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IYop8YprEe2YebK0qg0jYw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_IYxz4IprEe2YebK0qg0jYw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_r9sBYIpsEe2YebK0qg0jYw" name="ComponentSendGreetings" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_r9sBYYpsEe2YebK0qg0jYw" processName="sendgreetings.SendGreetings"/>
+    <sca:service xmi:id="_r9sBYopsEe2YebK0qg0jYw" name="sendgreetings">
+      <sca:interface.wsdl xmi:id="_r9sBY4psEe2YebK0qg0jYw" interface="http://xmlns.example.com/20230102124132PLT#wsdl.interface(sendgreetings)" scaext:wsdlLocation="../Processes/sendgreetings/SendGreetings.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

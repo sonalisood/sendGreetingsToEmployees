@@ -1,0 +1,68 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "SendGreetings",
+    "description" : "SendGreetings service"
+  },
+  "host" : "localhost:8082",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/sendgreetings" : {
+      "post" : {
+        "summary" : "postSendGreetings",
+        "description" : "postSendGreetings",
+        "operationId" : "post-sendgreetings",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Request"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Response to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Response"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Response" : {
+      "type" : "object",
+      "required" : [ "Message", "YearsOfService", "Name" ],
+      "properties" : {
+        "Message" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "YearsOfService" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Request" : {
+      "type" : "object",
+      "required" : [ "YearsOfService", "Name" ],
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "YearsOfService" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

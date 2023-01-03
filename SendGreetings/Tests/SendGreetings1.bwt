@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/SendGreetings/Tests/SendGreetings1.bwt">
+  <ProcessNode Id="sendgreetings.SubProcess" Name="sendgreetings.SubProcess" ModelType="BW" moduleName="SendGreetings">
+    <Assertion Id="65a1cb72-c6f9-4de4-8194-e66dbc0db0ce" Name="Mapper" hasDecoration="true">
+      <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
+      <Expression>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/SendGreetings&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template match=&quot;/&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;'1'=$Mapper/tns:YearsOfService&quot;>&lt;result status=&quot;passed&quot; message=&quot;Assertion passed.&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;result status=&quot;failed&quot; message=&quot;Assertion failed.&quot;/>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet></Expression>
+      <OriginalExpression>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/SendGreetings&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template name=&quot;Mapper&quot; match=&quot;/&quot;>&lt;Primitive-Assertion>&lt;AssertType>&lt;string>&lt;testInput>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/testInput>&lt;goldInput>&lt;xsl:value-of select=&quot;$Mapper/tns:YearsOfService&quot;/>&lt;/goldInput>&lt;/string>&lt;/AssertType>&lt;/Primitive-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
+    </Assertion>
+    <Operation Name="callProcess" serviceName="sendgreetings.SubProcess">
+      <Inputs Id="c8e03bfa-8aa5-4d0c-a720-fb0f8cba5bdeSendGreetings_sendgreetings.SubProcess_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+        <informations Name="input" nameSpace="http://www.example.org/SendGreetings">
+          <nameSpaces prefix="tns" nameSapce="http://www.example.org/SendGreetings"/>
+          <Parameter Name="tns:Request">
+            <parameters Name="tns:Name" type="string" nameSpace="http://www.example.org/SendGreetings">
+              <parent Name="RequestType" nameSpace="http://www.example.org/SendGreetings"/>
+            </parameters>
+            <parameters Name="tns:YearsOfService" Value="1" type="string" nameSpace="http://www.example.org/SendGreetings">
+              <parent Name="RequestType" nameSpace="http://www.example.org/SendGreetings"/>
+            </parameters>
+          </Parameter>
+        </informations>
+      </Inputs>
+      <resolvedInput inputValue="&lt;tns:Request xmlns:tns='http://www.example.org/SendGreetings' >&lt;tns:Name>&lt;/tns:Name>&lt;tns:YearsOfService>1&lt;/tns:YearsOfService>&lt;/tns:Request>"/>
+    </Operation>
+  </ProcessNode>
+</emulation:EmulationData>

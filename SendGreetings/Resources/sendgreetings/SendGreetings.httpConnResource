@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_r-boQYpsEe2YebK0qg0jYw" name="sendgreetings.SendGreetings" type="httpconnector:HttpConnectorConfiguration">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_r-lZQIpsEe2YebK0qg0jYw" port="8082">
+    <substitutionBindings xmi:id="_r-lZQYpsEe2YebK0qg0jYw" template="host" propName="BW.HOST.NAME"/>
+  </jndi:configuration>
+</jndi:namedResource>
